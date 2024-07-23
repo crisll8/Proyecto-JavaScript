@@ -6,4 +6,21 @@
 .title {
   color: gray;
   background-color: burlywood;
+ text-align: center;
+ margin-top: 0px;
+}
+.container-btn-add {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+#btn-add {
+  margin-top: 20px;
+  padding: 10px;
+  background-color:olive;
+  color:beige;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 500px;
 }

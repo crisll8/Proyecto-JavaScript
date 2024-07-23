@@ -1,8 +1,24 @@
 function convertir() {
   let acciónHavanna = 6180;
   let acciónBBVA = 3880;
+  let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-  let cambio = prompt(
+  let contador = 1;
+  let addTodoButton = document.getElementById("btn-add");
+  let todosList = document.getElementById("todo-list"); 
+  
+  let addTodo = () => {
+    let todoText = prompt("Ingrese su DNI para realizar una nueva compra/venta");
+    let todo = { id: contador, text: todoText, completed: false };
+    todos.push(todo);
+  
+    contador++;
+  
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
+  addTodoButton.addEventListener("click", addTodo);
+ 
+   let cambio = prompt(
     'Bienvenido al sitio web de cálculo de cantidad de pesos en sus acciones, elija la acción con la que desea operar "havanna" - "bbva"'
   );
 
